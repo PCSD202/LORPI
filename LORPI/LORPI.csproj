@@ -8,6 +8,8 @@
         <Title>Laptop Organizer API</Title>
         <Authors>Carbun</Authors>
         <Description>This is an API for interfacing with the Laptop organizer called LORI</Description>
+        <RepositoryUrl>https://github.com/PCSD202/LORPI</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
