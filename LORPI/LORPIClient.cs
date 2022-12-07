@@ -22,6 +22,9 @@ public class LORPIClient : IDisposable
     public AssetWarranty GetWarrantyInfo(string serviceTag) => _client.GetJson<AssetWarranty>($"Warranty/{serviceTag}")!;
     public Task<AssetWarranty> GetWarrantyInfoAsync(string serviceTag) => _client.GetJsonAsync<AssetWarranty>($"Warranty/{serviceTag}")!;
 
+    public bool ValidateServiceTag(string serviceTag) => _client.Get<bool>(new RestRequest($"Warranty/{serviceTag}/validate"))!;
+    public Task<bool> ValidateServiceTagAsync(string serviceTag) => _client.GetAsync<bool>(new RestRequest($"Warranty/{serviceTag}/validate"))!;
+
 
     public void Dispose()
     {
