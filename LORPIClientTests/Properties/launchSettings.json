@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LORPIClientTests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "APIKey": "719b1bca-cec6-4200-976f-27ae3add67b2"
+      }
+    }
+  }
+}
