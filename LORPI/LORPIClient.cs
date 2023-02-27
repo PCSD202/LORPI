@@ -13,6 +13,8 @@ public class LORPIClient : IDisposable
         _client.AddDefaultHeader("APIKey", AuthKey);
     }
 
+    public IEnumerable<SystemOverview> GetSystemOverview() => _client.GetJson<IEnumerable<SystemOverview>>("Shelf/Overview")!;
+    
     public IEnumerable<Laptop> GetLaptops() => _client.GetJson<IEnumerable<Laptop>>("laptop")!;
     public Task<IEnumerable<Laptop>> GetLaptopsAsync() => _client.GetJsonAsync<IEnumerable<Laptop>>("laptop")!;
 

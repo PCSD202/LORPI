@@ -32,4 +32,11 @@ public class Tests
         var data = Client.GetWarrantyInfo(serviceTag);
         Assert.That(data.ProductLineDescription, Is.EqualTo(expectedModelName));
     }
+    
+    [Test]
+    public void CheckOverview()
+    {
+        var data = Client.GetSystemOverview();
+        Assert.That(data, Is.Not.Empty);
+    }
 }

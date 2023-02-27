@@ -10,6 +10,9 @@
         <Description>This is an API for interfacing with the Laptop organizer called LORI</Description>
         <RepositoryUrl>https://github.com/PCSD202/LORPI</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
+        <FileVersion>1.0.1.0</FileVersion>
+        <PackageReleaseNotes>Added validate function</PackageReleaseNotes>
+        <Version>1.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>
