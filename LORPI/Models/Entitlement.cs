@@ -8,10 +8,10 @@ public class Entitlement {
     public string ItemNumber { get; set; }
     
     [JsonProperty("startDate")]
-    public DateTimeOffset StartDate { get; set; }
+    public DateTimeOffset? StartDate { get; set; }
     
     [JsonProperty("endDate")]
-    public DateTimeOffset EndDate { get; set; }
+    public DateTimeOffset? EndDate { get; set; }
     
     [JsonProperty("entitlementType")]
     public string EntitlementType { get; set; }
