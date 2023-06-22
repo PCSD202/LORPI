@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System.ComponentModel;
+using Newtonsoft.Json;
 
 namespace LORPI.Models;
 
@@ -43,7 +44,8 @@ public class AssetWarranty {
     public bool? Duplicated { get; set; }
 
     [JsonProperty("invalid")]
-    public bool Invalid { get; set; }
+    [DefaultValue(true)]
+    public bool Invalid { get; set; } = true;
     
     [JsonProperty("entitlements")]
     public List<Entitlement> Entitlements { get; set; }

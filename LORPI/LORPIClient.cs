@@ -28,6 +28,22 @@ public class LORPIClient : IDisposable
     public Task<bool> ValidateServiceTagAsync(string serviceTag) => _client.GetAsync<bool>(new RestRequest($"Warranty/{serviceTag}/validate"))!;
 
 
+    public List<AssetWarranty> BulkLookupServiceTags(List<string> serviceTags)
+    {
+        var request = new RestRequest($"Warranty/bulkLookup");
+        request.AddJsonBody(serviceTags);
+        var response = _client.Post<List<AssetWarranty>>(request);
+        return response ?? new List<AssetWarranty>();
+    }
+
+    public async Task<List<AssetWarranty>> BulkLookupServiceTagsAsync(List<string> serviceTags)
+    {
+        var request = new RestRequest($"Warranty/bulkLookup");
+        request.AddJsonBody(serviceTags);
+        var response = await _client.PostAsync<List<AssetWarranty>>(request);
+        return response ?? new List<AssetWarranty>();
+    }
+
     public void Dispose()
     {
         _client.Dispose();

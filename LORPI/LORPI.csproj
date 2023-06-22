@@ -11,8 +11,9 @@
         <RepositoryUrl>https://github.com/PCSD202/LORPI</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <FileVersion>1.0.1.0</FileVersion>
-        <PackageReleaseNotes>Added validate function</PackageReleaseNotes>
+        <PackageReleaseNotes>Added GetOverview Function</PackageReleaseNotes>
         <Version>1.0.1</Version>
+        <PackageVersion>1.0.2</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
